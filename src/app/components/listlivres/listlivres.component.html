@@ -1,0 +1,13 @@
+<h1>liste des livres</h1>
+recherche:
+<input type="radio" name="tri" value="tous"/>tous
+<input type="radio" name="tri" value="romans"/>romans
+<input type="radio" name="tri" value="historique"/>historique
+<ul>
+
+    <li *ngFor="let l of lesLivres">
+        {{l.id}}--{{l.titre}}--
+        <button [routerLink]="['/listLivres',l.id]"> infos</button>
+
+    </li>
+</ul>
